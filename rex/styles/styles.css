@@ -1,0 +1,41 @@
+/* 
+	Author: Geremi The man that is MAD
+	File: geremi person style
+	Date: January
+	topic: comment 
+
+ */
+
+/*
+
+	selector {
+	
+		declaration;
+	}
+
+	selector {
+		property : value (s);
+		property : value;
+	}
+
+	1. Simple selectors (based name, id, class)
+	2. Combinator selectors (based on specific rel btw element)
+	3. Pseudo-class selectors (based on a certain state)
+	4. Psuedo-element selectors (select a part of an element)
+	5. Attribute selectors (based on an attribute)
+*/
+
+*{
+	margin: 0; padding: 0;
+}
+
+
+
+.sectionText {
+	 /* predefined color, RGB, HEX, HSL, RGBA, HSLA */
+	 color: #369999; 
+	 height: 700px;
+	 
+	 background: #369 url('../img/third.jpg') no-repeat fixed center;
+
+}

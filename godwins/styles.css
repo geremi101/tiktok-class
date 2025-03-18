@@ -1,0 +1,114 @@
+/* 
+	 Day One
+	 --------
+
+
+	Selector (s) {
+		declarations (s);
+	}
+
+	1. Simple Selectors (Select Element based on name, id, class)
+	2. Combinator Selectors (Select Element based on specific relationship btw them)
+	3. Pseudo-class selectors (select element based on certain state)
+	4. Pseudo-element selectors (select stype part of an element)
+	5. Attribute Selectors (select element based on attr or attr value)
+*/
+
+/*
+	Using Simple Selectors 
+*/
+
+/*
+	Selecting Element using name
+*/
+
+*  /* Select all Element   {
+	margin: 0px;
+	padding: 0px;
+}
+
+p /* Select All P tags and apply this rules to it  {
+	color : red;
+	border: 1px solid #369;
+}
+
+#demoP /* Select all Element with the id attr of demoP  {
+	 box-shadow: 2px 2px 4px #368;
+}
+
+.we /* Select all Element with the class attr of we  {
+	border: 2px solid green;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+/*
+	Assignment 
+		1. which select will take precedence and why
+		2. which style sheet will take precedence and why (Cascading Order)
+		3. what is CSS specificity explain how you calculate specificity.
+*/
+
+/*
+	Declarations
+*/
+
+
+/*
+	CSS Color
+	1. using the color name e.g red
+	2. using RGB 
+	3. using RGBa
+	4. using HEX 
+
+
+.para {
+	color : #369;
+}
+*/
+
+/*
+	CSS Background Properties
+		1. Color
+		2. image
+		3. repeat
+		4. attachment
+		5. position
+		6. short hand
+
+
+.we {
+
+	
+	background: #36F url("img/logo.png") no-repeat fixed right; 
+
+}
+
+	Assignment
+	 1. bg-size
+
+	CSS BORDERS
+	___________
+	1. size
+	2. style
+*/
+
+.we, .demo {
+	height: 500px; 
+	width: 600px;
+	
+	border: 1px solid #565; 
+	background: url("img/dp.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+.we {
+	
+}
+
+.demo {
+	
+}

@@ -1,0 +1,10 @@
+.button {
+	border: 1px solid red;
+	background: transparent;
+	color: red;
+}
+
+.button:hover {
+	background: red;
+	color: white;
+}
