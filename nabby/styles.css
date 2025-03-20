@@ -1,0 +1,45 @@
+/* this is a comment 
+	Author: Eze Geremi Matthew
+	Description: Geremi the man that is MAD!
+
+*/
+
+
+body /* this one too */ {
+	background: tomato;
+	/*
+		you can change the color of the element 
+		by changing tomato to pepper
+	*/
+}
+
+/*
+
+	1. What CSS
+	2. What can be use for 
+	3. Syntax: General Syntax for CSS 
+		selector {
+			declaration (s) ;
+			property : value (s) ;
+		}
+	4. Include css into your HTML file
+		3 ways to include css into your file 
+			1. inline
+				pass the css as attr to element 
+			2. Internal 
+				use the style tag
+					can be placed anywher with the page
+					Note: always us head
+			3. External
+				Create a css file 
+				link the file to the HTML page 
+					using the link tag to refer
+
+				place the link anywhere with the file
+				 Note: always use the head.
+
+			NOTE: always use External
+	5.  Comments in CSS 3
+		we comment using 
+		/* This is a comment  */
+*/

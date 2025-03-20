@@ -1,14 +1,14 @@
 <?php
 	/*
-	if($_SERVER['REQUEST_METHOD'] !== 'POST') {
-		header("LOCATION: index.php");
-		exit();
-	} 
+		if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+			header("LOCATION: index.php");
+			exit();
+		} 
 
-	if(!isset($_POST['email'], $_POST['passdfword']) ){
-		header("LOCATION: index.php?q=Fill the login Form");
-		exit();
-	}
+		if(!isset($_POST['email'], $_POST['passdfword']) ){
+			header("LOCATION: index.php?q=Fill the login Form");
+			exit();
+		}
 
 	*/
 
@@ -16,16 +16,16 @@
 	// $_POST 
 	// $_GET
 	/*
-	$email = $_REQUEST['email'];
-	$password = $_REQUEST['password'];
+		$email = $_REQUEST['email'];
+		$password = $_REQUEST['password'];
 
-	$email = trim($email);
-	$email = strtolower( $email );
+		$email = trim($email);
+		$email = strtolower( $email );
 
-	if ($email == "geremi@geremi.com" && $password === "geremi")
-		echo "Login Successfull";
-	else
-		header("LOCATION: index.php?q=wrong login details");	
+		if ($email == "geremi@geremi.com" && $password === "geremi")
+			echo "Login Successfull";
+		else
+			header("LOCATION: index.php?q=wrong login details");	
 
 	*/
 
@@ -35,8 +35,8 @@
 
 	*/
 
-	// var dump
-	// var_dump($_SERVER);
+		// var dump
+		// var_dump($_SERVER);
 
 	/*
 		ASSIGNMENT:
@@ -106,7 +106,7 @@
 	 if the name if the same.
 
 */
-	
+/*
 
 	// Check if the form is submited 
 	if($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -116,7 +116,6 @@
 
 	// check if there is an error with the file
 	if($_FILES['pix']['error'] > 0){
-
 		header("LOCATION: index.php?q=error with the file you uploaded!");
 		exit();
 	}
@@ -141,6 +140,13 @@
 		header("LOCATION: index.php?q=There was an error uploading file");
 		exit();
 	}
+*/
+	ob_start();
+	session_start();
+
+
+
+
 
 
 
