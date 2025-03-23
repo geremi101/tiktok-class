@@ -140,14 +140,58 @@
 		header("LOCATION: index.php?q=There was an error uploading file");
 		exit();
 	}
+
+	
+	1. Check if the form is submited
+	2. retrive the form
+	3. validate 
+	3. authenticate 
+
+
 */
 	ob_start();
-	session_start();
+
+	if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+		header("LOCATION: index.php");
+		exit();
+	}
+
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+
+	/*
+		minimum of 6 char
+		max of 32 char
+		must contain at least 1 upper case
+		must contain at least 1 lowercast
+		must contain at least 1 special char
+		you much change it every 3 months 
+			can not reuse old pass
+	*/
 
 
+	$correctEmail = 'geremi@geremi.com';
+	$correctPassword = 'geremi';
+
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	    header("LOCATION: index.php?q=invalid Email");
+	    exit();
+	}
+
+	if (strlen($password) < 6 && strlen($password) > 32 ) {
+		header("LOCATION: index.php?q=invalid Password");
+	    exit();
+	}
 
 
+	if ($email == $correctEmail && $password === $correctPassword) {
 
+		session_start();
+		$_SESSION['email'] = $email;
 
-
-
+		header("LOCATION: home.php");
+	    exit();
+	}else{
+		header("LOCATION: index.php?q=invalid Login");
+	    exit();
+	}

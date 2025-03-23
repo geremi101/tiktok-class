@@ -88,18 +88,21 @@
 	ob_start();
  	session_start();
 
- 	$_SESSION['username'] = 'geremi101';
+ 	if (isset($_SESSION['email'])) {
+		header("LOCATION: home.php");
+	   exit();
+	}
 
 ?>
 
 <!DOCTYPE html>
 <html>
 		<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>E - Commerce</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">		
-	</head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>E - Commerce</title>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">		
+		</head>
 	<body>
 		<div class="container-fluid">
 			<h1>Welcome to our site</h1>
@@ -128,7 +131,7 @@
   <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
 </div>
 
-					  <button type="submit" class="btn btn-success">Upload</button>
+					  <button type="submit" class="btn btn-success">Login</button>
 					</form>
 			 	</div>
 			</div>
