@@ -195,3 +195,39 @@
 		header("LOCATION: index.php?q=invalid Login");
 	    exit();
 	}
+
+
+store: constrain 
+
+Custormer
+id 	CId	Name 		Address 	City 		Number 
+1 	001	Geremi 		22 			Benin 		09164324075
+2	002	Lex 		23 			Lagos 		1234567890
+3	003	Rex 		23 			Lagos 		1234565690
+
+Order
+id 	CId 	item 	deliver is_Pre p_o_d  
+1 	002		116 	az1		true 	0
+2	003		118 	k87		false 	1
+3   001		114 	r5t		false 	1
+4  	003 	112 	n9w		true 	0
+5 	002 	117 	az1		true  	0
+
+deliver 
+id 	d_id	c_name 		city 	manger 
+1 	az1 	Fedex 		NY 		fred 
+2 	n9w		UPS 		ABJ 	Chibuzor
+3 	k87		DHL 		Accra 	Kofi
+4 	r5t		Aramex 		Belin 	Balack 
+
+item 
+id 	i_id	i_name  	expire  	manifacturer
+1  	111 	ball 		20/12/20 	Addidas	
+2 	112 	food 		10/10/10 	Dangote
+3 	113     milk 		05/05/05 	Peak 
+4 	114 	shoe 		11/11/11 	gucci 		
+5 	115 	bag 		22/02/22 	prada 
+6 	116		ball 		04/02/25 	Nike 
+7 	117 	milk 		02/08/27 	Cowbel 
+8 	118 	bag 		30/01/29	Fendi 
+

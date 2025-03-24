@@ -1,3 +1,55 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+
+#logoImg {
+	box-shadow: 2px 2px 5px #369;
+}
+
+p, div, marquee {
+	border: 1px solid green;
+	color:  green;
+}
+
+p, .pass, #para {
+	border: 1px solid green;
+	color:  green;
+}
+
+p {
+	border: 1px solid green;
+	color:  green;
+}
+
+.pass {
+	border: 1px solid green;
+	color:  green;
+}
+
+#para {
+	border: 1px solid green;
+	color:  green;
+}
+
+/*
+div {
+	border : 1px solid red;
+}
+
+marquee {
+	background: red;
+}
+
+.contact {
+	background: green;
+	color: #fff;
+}
+*/
+
 /* this is a comment 
 	Author: Eze Geremi Matthew
 	Description: Geremi the man that is MAD!
@@ -5,15 +57,11 @@
 */
 
 
-body /* this one too */ {
-	background: tomato;
-	/*
-		you can change the color of the element 
-		by changing tomato to pepper
-	*/
-}
-
 /*
+	Day 1
+		Session 1
+
+	Topic: Intro To Css
 
 	1. What CSS
 	2. What can be use for 
@@ -43,3 +91,29 @@ body /* this one too */ {
 		we comment using 
 		/* This is a comment  */
 */
+
+/*
+	Day 1 
+		Session 2
+
+	Topic: Selectors 
+
+	1. what is CSS Selectors: used to select the HTML element that you want to style
+
+	CSS selectors can be divided into 5 categories
+	1. Simple Selector (select Element based on name, id, class)
+	2. Combinator Selector (Select element based on a specific relationship between them)
+	3. Pseudo-class selectors (select element based on a certain state)
+	4. Pseudo-element selectors (Select or style part of an element )
+	5. Attribute selectors (Select elements based on an attribute or attr value)
+*/
+
+/*Simple Selectors: name, id, class */
+
+
+/*
+	Select all the div element and apply the declaration it them
+*/
+
+
+
