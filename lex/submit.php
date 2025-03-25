@@ -196,38 +196,158 @@
 	    exit();
 	}
 
+/*
+Lesson: RDBMS using mysql DB
+Goal: Create Social Media / Bloging Platform
+
+Day 1. Mysql DB
+SESSION: 1
+Topic: Understading Relationship in RDBMS
+
 
 store: constrain 
 
-Custormer
-id 	CId	Name 		Address 	City 		Number 
-1 	001	Geremi 		22 			Benin 		09164324075
-2	002	Lex 		23 			Lagos 		1234567890
-3	003	Rex 		23 			Lagos 		1234565690
+	Custormer
+	id 	CId	Name 		Address 	City 		Number 
+	1 	001	Geremi 		22 			Benin 		09164324075
+	2	002	Lex 		23 			Lagos 		1234567890
+	3	003	Rex 		23 			Lagos 		1234565690
 
-Order
-id 	CId 	item 	deliver is_Pre p_o_d  
-1 	002		116 	az1		true 	0
-2	003		118 	k87		false 	1
-3   001		114 	r5t		false 	1
-4  	003 	112 	n9w		true 	0
-5 	002 	117 	az1		true  	0
+	Order
+	id 	CId 	item 	deliver is_Pre p_o_d  
+	1 	002		116 	az1		true 	0
+	2	003		118 	k87		false 	1
+	3   001		114 	r5t		false 	1
+	4  	003 	112 	n9w		true 	0
+	5 	002 	117 	az1		true  	0
 
-deliver 
-id 	d_id	c_name 		city 	manger 
-1 	az1 	Fedex 		NY 		fred 
-2 	n9w		UPS 		ABJ 	Chibuzor
-3 	k87		DHL 		Accra 	Kofi
-4 	r5t		Aramex 		Belin 	Balack 
+	deliver 
+	id 	d_id	c_name 		city 	manger 
+	1 	az1 	Fedex 		NY 		fred 
+	2 	n9w		UPS 		ABJ 	Chibuzor
+	3 	k87		DHL 		Accra 	Kofi
+	4 	r5t		Aramex 		Belin 	Balack 
 
-item 
-id 	i_id	i_name  	expire  	manifacturer
-1  	111 	ball 		20/12/20 	Addidas	
-2 	112 	food 		10/10/10 	Dangote
-3 	113     milk 		05/05/05 	Peak 
-4 	114 	shoe 		11/11/11 	gucci 		
-5 	115 	bag 		22/02/22 	prada 
-6 	116		ball 		04/02/25 	Nike 
-7 	117 	milk 		02/08/27 	Cowbel 
-8 	118 	bag 		30/01/29	Fendi 
+	item 
+	id 	i_id	i_name  	expire  	manifacturer
+	1  	111 	ball 		20/12/20 	Addidas	
+	2 	112 	food 		10/10/10 	Dangote
+	3 	113     milk 		05/05/05 	Peak 
+	4 	114 	shoe 		11/11/11 	gucci 		
+	5 	115 	bag 		22/02/22 	prada 
+	6 	116		ball 		04/02/25 	Nike 
+	7 	117 	milk 		02/08/27 	Cowbel 
+	8 	118 	bag 		30/01/29	Fendi 
 
+
+Day 1.
+SESSION 2:
+TOPIC: Manipulation MySQL using CMD
+
+MySQL workbench 
+CMD / Terminal 
+Heidi SQL
+PHPMyAdmin 
+PHP / Python / Node 
+
+
+CMD ->	SQL ->	MySQL / Maria DB 
+
+	1. Connect to the DB using CMD
+	2. Exit the MySQL DB environment
+	3. How to display all DBs
+	4. How to display all Tables in the DB
+	5. Planing a DB table.
+	6. syntax for creating a table 
+	6. create DB
+	7. Create tables
+	8. insert into tables
+	9. Retrive data from table
+
+
+	Register
+
+		users
+			-> id int (11)
+			-> name => varchar (50) 
+			-> Date of Birth => date
+			-> gendar => enum ('Male', 'Female')
+			-> email => varchar (35)
+			-> phone => varchar (11)
+			-> username => varchar (32)
+			-> password => varchar (32)
+			-> priv => enum ('User', 'Admin')
+			-> date_created => date
+		
+			Syntax for creating a table 
+			CREATE TABLE table_name (
+				colums1 datatype (size),
+				colums2 datatype,
+				colums3 datatype (size)
+			);
+
+			Syntax for inserting data into table
+
+			INSERT INTO table_name (colunm1, colunm, ...)
+			VALUES (value1, value2, ...)
+
+			Syntax for selecting data from table 
+			SELECT * FROM table_name ;
+
+
+		CREATE TABLE users (
+			id int,
+			name varchar (50),
+			d_o_b date,
+			gender enum ('Male', 'Female'),
+			email varchar (32),
+			phone varchar (11),
+			username varchar (32),
+			password varchar (255),
+			priv enum('user', 'Admin'),
+			created_at date 
+		); 
+
+		INSERT INTO users (
+			id,
+			name,
+			d_o_b,
+			gender,
+			email,
+			phone,
+			username,
+			password,
+			priv,
+			created_at
+		)
+		VALUES (
+			1,
+			'geremi',
+			'2008-11-18',
+			'Male',
+			'geremi@geremi101.com',
+			'09164324075',
+			'geremi101',
+			'geremi',
+			'Admin',
+			'2025-03-25'
+		);
+
+		9164324075
+		Eze Geremi Matthew
+		Opay 
+
+		ASSignment:
+
+			Post
+				when users make post
+			Comment
+				when comment on a post
+			Reply
+				when a user reply a comment
+
+		Explain the relationship between 
+		all the tables 
+			users -> post -> comment -> reply
+
+*/
