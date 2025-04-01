@@ -159,20 +159,6 @@
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
-	/*
-		minimum of 6 char
-		max of 32 char
-		must contain at least 1 upper case
-		must contain at least 1 lowercast
-		must contain at least 1 special char
-		you much change it every 3 months 
-			can not reuse old pass
-	*/
-
-
-	$correctEmail = 'geremi@geremi.com';
-	$correctPassword = 'geremi';
-
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	    header("LOCATION: index.php?q=invalid Email");
 	    exit();
@@ -183,11 +169,27 @@
 	    exit();
 	}
 
+	
 
-	if ($email == $correctEmail && $password === $correctPassword) {
+	/*
+		minimum of 6 char
+		max of 32 char
+		must contain at least 1 upper case
+		must contain at least 1 lowercast
+		must contain at least 1 special char
+		you much change it every 3 months 
+			can not reuse old pass
+	*/
 
+	require 'connect.php';
+
+	$user = mysqli_query($con, "SELECT id FROM users WHERE email = '$email' AND password = '$password' ");
+
+	if (mysqli_num_rows($user) > 0) {
+		$user = mysqli_fetch_assoc($user);
+		
 		session_start();
-		$_SESSION['email'] = $email;
+		$_SESSION['id'] = $user['id'];
 
 		header("LOCATION: home.php");
 	    exit();
@@ -238,7 +240,6 @@ store: constrain
 	6 	116		ball 		04/02/25 	Nike 
 	7 	117 	milk 		02/08/27 	Cowbel 
 	8 	118 	bag 		30/01/29	Fendi 
-
 
 Day 1.
 SESSION 2:

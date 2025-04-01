@@ -105,11 +105,11 @@
 		</head>
 	<body>
 		<div class="container-fluid">
-			<h1>Welcome to our site</h1>
+			<h1>Your are one step closer!</h1>
 
 			<div class="card">
 				<div class="card-header">
-				    Login
+				    Register To Join Our Social Blog
 				</div>
 			  	<div class="card-body">
 			  		<?php
@@ -120,20 +120,51 @@
 			  	echo isset($_GET["s"]) ? 
 			  		'<div class="alert alert-success">'.$_GET["s"].'</div>' : "";
 					?>
-	<form method="post" action="submit.php">
+	<form method="post" action="createuser.php">
+
+		<div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+  <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name " required />
+</div>
+<div>
+	Gender:
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+  <label class="form-check-label" for="male">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+  <label class="form-check-label" for="female">Female</label>
+</div>
+
+<div class="mb-3">
+  <label for="dob" class="form-label">Date of Birth</label>
+  <input type="date" class="form-control" name="dob" id="dob" placeholder="YYYY-MM-DD" required />
+</div>
+
+		<div class="mb-3">
+  <label for="username" class="form-label">Username</label>
+  <input type="text" class="form-control" name="username" id="username" placeholder="
+  enter username" required />
+</div>
+<div class="mb-3">
+  <label for="phone" class="form-label">Phone Number</label>
+  <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter phone number" required />
+</div>
 		<div class="mb-3">
   <label for="email" class="form-label">Email address</label>
-  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required />
 </div>
 
 <div class="mb-3">
   <label for="password" class="form-label">Password</label>
-  <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+  <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password" required />
 </div>
 
-					  <button type="submit" class="btn btn-success">Login</button>
+					  <button type="submit" class="btn btn-success">Create Account</button>
 
-					  <small><a href="register.php"> Click here to register</a></small>
+					  <small><a href="index.php"> Click here to Login</a></small>
 					</form>
 			 	</div>
 			</div>

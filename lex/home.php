@@ -2,10 +2,17 @@
 	ob_start();
 	session_start();
 
-	if (!isset($_SESSION['email'])) {
+	if (!isset($_SESSION['id'])) {
 		header("LOCATION: index.php?q=You must Login to see this page");
 	    exit();
 	}
+
+	require 'connect.php';
+
+	$id = $_SESSION['id'];
+
+	$user = mysqli_query($con, "SELECT name, profile_pix FROM users WHERE id = '$id' ");
+	$user = mysqli_fetch_assoc($user);
 ?>
 
 
@@ -42,27 +49,32 @@
 		    </div>
 		  </div>
 		</nav>
-		
-		<div class="card mb-3 mt-4">
-		  <img src="https://geremi101.com/assets/images/banner.jpg" class="card-img-top" alt="...">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-		    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-		  </div>
+		<div class="row m-2">
+			<div class="col-sm-6 mb-3 mb-sm-0">
+				<div class="card mb-3 mt-4">
+				  <img  src="upload/<?php echo $user['profile_pix']; ?>" class="card-img-top" style="height: 300px; cursor: pointer;" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Welcome <?php echo ucwords($user['name']) ?></h5>
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 mb-3 mb-sm-0">
+			    <div class="card">
+			      <div class="card-body">
+			        <h5 class="card-title">What's on your mind</h5>
+			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			        <a href="#" class="btn btn-primary">Go somewhere</a>
+			      </div>
+			    </div>
+			  </div>
 		</div>
 	</div>
 
 	<div class="row m-2">
-	  <div class="col-sm-6 mb-3 mb-sm-0">
-	    <div class="card">
-	      <div class="card-body">
-	        <h5 class="card-title">Special title treatment</h5>
-	        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-	        <a href="#" class="btn btn-primary">Go somewhere</a>
-	      </div>
-	    </div>
-	  </div>
+	  
 	  <div class="col-sm-6">
 	    <div class="card">
 	      <div class="card-body">
