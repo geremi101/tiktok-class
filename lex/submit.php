@@ -156,38 +156,28 @@
 		exit();
 	}
 
+
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	    header("LOCATION: index.php?q=invalid Email");
-	    exit();
-	}
 
 	if (strlen($password) < 6 && strlen($password) > 32 ) {
 		header("LOCATION: index.php?q=invalid Password");
 	    exit();
 	}
 
-	
-
-	/*
-		minimum of 6 char
-		max of 32 char
-		must contain at least 1 upper case
-		must contain at least 1 lowercast
-		must contain at least 1 special char
-		you much change it every 3 months 
-			can not reuse old pass
-	*/
-
 	require 'connect.php';
 
-	$user = mysqli_query($con, "SELECT id FROM users WHERE email = '$email' AND password = '$password' ");
+	$user = mysqli_query($con, "SELECT id FROM users 
+		WHERE (email = '$email' OR 
+				phone = '$email' OR 
+				username = '$email') AND 
+				password = '$password' ");
+
+	
 
 	if (mysqli_num_rows($user) > 0) {
 		$user = mysqli_fetch_assoc($user);
-		
+
 		session_start();
 		$_SESSION['id'] = $user['id'];
 

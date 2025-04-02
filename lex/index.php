@@ -123,7 +123,7 @@
 	<form method="post" action="submit.php">
 		<div class="mb-3">
   <label for="email" class="form-label">Email address</label>
-  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+  <input type="text" class="form-control" name="email" id="email" placeholder="name@example.com">
 </div>
 
 <div class="mb-3">
