@@ -155,6 +155,64 @@
 									      </button>
 									    </div>
 									  </div>
+
+									  <div class="card-body">
+									   
+									    <div class="card mb-2 mt-2">
+									      <!-- User Info Section -->
+									      <div class="card-header d-flex align-items-center p-0">
+									        <img src="upload/avartar.png" class="rounded-circle" style="width: 60px" alt="User">
+									        <div>
+									          <h6 class="mb-0 fw-bold">geremi geremi</h6>
+									          <small class="text-muted">Posted on May 2,0 2020</small>
+									        </div>
+									      </div>
+									      <div class="card-body">
+									        <p class="card-text text-center">You dont have any post Yet!!!</p>
+									        <div class="d-flex gap-2">
+									          <button class="btn btn-outline-primary btn-sm">
+									            <i class="fa fa-thumbs-up me-1"></i> Like <span class="badge bg-primary ms-1">12</span>
+									          </button>
+									          <button class="btn btn-outline-danger btn-sm">
+									            <i class="fa fa-thumbs-down me-1"></i> Dislike <span class="badge bg-danger ms-1">3</span>
+									          </button>
+									          <button class="btn btn-outline-success btn-sm ms-auto">
+									            <i class="fa fa-comment me-1"></i> Reply
+									          </button>
+									        </div>
+									      </div>
+									    </div>
+
+									    <div class="card mb-2 mt-2">
+									      <!-- User Info Section -->
+									      <div class="card-header d-flex align-items-center p-0">
+									        <img src="upload/avartar.png" class="rounded-circle" style="width: 60px" alt="User">
+									        <div>
+									          <h6 class="mb-0 fw-bold">geremi geremi</h6>
+									          <small class="text-muted">Posted on May 2,0 2020</small>
+									        </div>
+									      </div>
+									      <div class="card-body">
+									        <p class="card-text text-center">You dont have any post Yet!!!</p>
+									        <div class="d-flex gap-2">
+									          <button class="btn btn-outline-primary btn-sm">
+									            <i class="fa fa-thumbs-up me-1"></i> Like <span class="badge bg-primary ms-1">12</span>
+									          </button>
+									          <button class="btn btn-outline-danger btn-sm">
+									            <i class="fa fa-thumbs-down me-1"></i> Dislike <span class="badge bg-danger ms-1">3</span>
+									          </button>
+									          <button class="btn btn-outline-success btn-sm ms-auto">
+									            <i class="fa fa-comment me-1"></i> Reply
+									          </button>
+									        </div>
+									      </div>
+									    </div>
+
+									     <div class="input-group input-group-sm">
+									      <input type="text" class="form-control" placeholder="Reply to this post" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+									      <button class="btn btn-outline-success" type="button">Reply</button>
+									    </div>
+									  </div>
 									</div>
 								';
 							}
