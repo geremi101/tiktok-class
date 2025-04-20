@@ -92,23 +92,48 @@ p /* Select All P tags and apply this rules to it  {
 	___________
 	1. size
 	2. style
+	091 6432 4075
 */
 
-.we, .demo {
-	height: 500px; 
+* {
+	margin: 0; padding: 0;
+}
+
+
+.we{
+	height: 300px; 
 	width: 600px;
-	
-	border: 1px solid #565; 
-	background: url("img/dp.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
+	border: 3px solid #565; 
+	padding: 10px;
+	margin: 0 auto;	
+}
+
+.first-child, .second-child, .third-child{
+	border: 1px solid green;
+	height: 130px;
+	width: 270px;
+	margin: 10px;
 }
 
 
-.we {
-	
+
+.first-child, .second-child {
+	float: left;
+	display: none;
 }
 
-.demo {
-	
+.second-child {	
+
+}
+
+.clear {
+	clear: both;
+}
+
+.first-child:hover {
+	cursor: pointer;
+	box-shadow: 10px 15px  8px #369;
+	color: green;
+	font-weight: bolder;
+	padding: 20px;
 }

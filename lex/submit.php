@@ -172,7 +172,6 @@
 				phone = '$email' OR 
 				username = '$email') AND 
 				password = '$password' ");
-
 	
 
 	if (mysqli_num_rows($user) > 0) {
@@ -197,39 +196,47 @@ SESSION: 1
 Topic: Understading Relationship in RDBMS
 
 
-store: constrain 
+store:  
 
 	Custormer
-	id 	CId	Name 		Address 	City 		Number 
-	1 	001	Geremi 		22 			Benin 		09164324075
-	2	002	Lex 		23 			Lagos 		1234567890
-	3	003	Rex 		23 			Lagos 		1234565690
+	id:PK 	Name 		Address 	City 		Number 
+	1 		Geremi 
 
 	Order
-	id 	CId 	item 	deliver is_Pre p_o_d  
-	1 	002		116 	az1		true 	0
-	2	003		118 	k87		false 	1
-	3   001		114 	r5t		false 	1
-	4  	003 	112 	n9w		true 	0
-	5 	002 	117 	az1		true  	0
+	id:PK 	C_Id:FK 	item:FK 	deliver:FK is_Pre p_o_d 
+	1 		1  			1 			1
+	
 
 	deliver 
-	id 	d_id	c_name 		city 	manger 
-	1 	az1 	Fedex 		NY 		fred 
-	2 	n9w		UPS 		ABJ 	Chibuzor
-	3 	k87		DHL 		Accra 	Kofi
-	4 	r5t		Aramex 		Belin 	Balack 
+	id:PK 	d_id	c_name 		city 	manger 
+	
 
 	item 
-	id 	i_id	i_name  	expire  	manifacturer
-	1  	111 	ball 		20/12/20 	Addidas	
-	2 	112 	food 		10/10/10 	Dangote
-	3 	113     milk 		05/05/05 	Peak 
-	4 	114 	shoe 		11/11/11 	gucci 		
-	5 	115 	bag 		22/02/22 	prada 
-	6 	116		ball 		04/02/25 	Nike 
-	7 	117 	milk 		02/08/27 	Cowbel 
-	8 	118 	bag 		30/01/29	Fendi 
+	id:PK 	i_id	i_name  	expire  	manifacturer
+
+
+	Country 
+	id country_Name etc
+	1 	Nigeria 	anything
+	2   Ghana 		anything
+	3 	Togo 		anything
+
+	State
+	id 	state_name contry_id
+	1 	Lagos 		1
+	2 	Abuja 		1
+	3 	Kanu 		2
+
+	City
+	id 	city_name state_id country_id
+	1 	Benin 
+	2 	FCT
+	
+	Relationship 
+		one to one 
+		one to many 
+		many to one 
+		many to many 
 
 Day 1.
 SESSION 2:
@@ -269,7 +276,16 @@ CMD ->	SQL ->	MySQL / Maria DB
 			-> password => varchar (32)
 			-> priv => enum ('User', 'Admin')
 			-> date_created => date
-		
+
+
+		posts
+		 	-> id int pk,
+		 	-> user_id int FK
+		 	-> post varchar (255)
+		 	-> created_at date
+
+
+			
 			Syntax for creating a table 
 			CREATE TABLE table_name (
 				colums1 datatype (size),
@@ -296,6 +312,7 @@ CMD ->	SQL ->	MySQL / Maria DB
 			username varchar (32),
 			password varchar (255),
 			priv enum('user', 'Admin'),
+			profile_pix varchar(255) DEFAULT 'avartar.png',
 			created_at date 
 		); 
 
@@ -312,7 +329,7 @@ CMD ->	SQL ->	MySQL / Maria DB
 			created_at
 		)
 		VALUES (
-			1,
+			1, 2025/FUT/SICT/ICT/00000145
 			'geremi',
 			'2008-11-18',
 			'Male',
@@ -323,6 +340,52 @@ CMD ->	SQL ->	MySQL / Maria DB
 			'Admin',
 			'2025-03-25'
 		);
+	
+		Comments 
+			id int primary key auto increatement
+			user_id int NOT NULL FK,  
+			post_id int NOT NULL FK 
+			comment varchar (255) NOT NULL
+			created_at date DEFAULT current date
+			check 
+
+		replies
+			id int primary key auto increasemtn
+			user_id int not null fk, 2025/FUT/SICT/ICT/00000145
+			comment_id int not null fk
+			reply varchar (255) not null 
+			created_at date default current date
+
+		Reaction (post, comment, reply) dislike (post, comment, reply)
+			id int primary key auto increament 
+			user_id int not null fk FUT/SICT/ICT/2025/00000145
+			post_id int not null fk
+			comment_id not null fk
+			reply_id not null fk 
+
+		Region/zone/area/street/no
+
+		
+
+
+
+		composite KEY: 
+
+		
+		CREATE TABLE likes (
+			id int,
+			user_id int NOT NULL, 
+			like enum(0, 1),
+			created_at date NOT NULL
+		)
+
+		CREATE TABLE table_name (
+			column datatype (size) constraint,
+			column datatype (size) constraint
+		)
+
+
+
 
 		9164324075
 		Eze Geremi Matthew
@@ -336,9 +399,41 @@ CMD ->	SQL ->	MySQL / Maria DB
 				when comment on a post
 			Reply
 				when a user reply a comment
+			Likes
 
 		Explain the relationship between 
 		all the tables 
 			users -> post -> comment -> reply
+
+
+	DATABASE Constrain.
+
+	what is database: Are used to maintain DATA intergrity 
+
+	Accuracy, Consistency, security, validation, Availability 
+
+	Column level constrain: applied to single
+	table level constrain: applied to whole table
+
+
+	Commonly used constraint:
+
+	NOT NULL:
+	UNIQUE:
+
+	PRIMARY KEY: 
+		id => int => auto_increament
+
+	FOREIGHN KEY:
+	CHECK:
+	DEFAULT:
+	INDEX:
+	AUTO INCREAMENT:
+
+	234 91 6432 4075
+
+	comments
+	replies
+	likes
 
 */

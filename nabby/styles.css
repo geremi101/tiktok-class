@@ -1,39 +1,33 @@
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	border: 2px solid #369;
 }
 
 
-
-
-#logoImg {
-	box-shadow: 2px 2px 5px #369;
+#logo {
+	box-shadow: 2px 5px 4px #369;
+	width: 200px;
+	margin: 5px auto;
 }
 
-p, div, marquee {
-	border: 1px solid green;
-	color:  green;
+.product-table{
+	border: 1px solid #000;
+	width: 100%;
 }
 
-p, .pass, #para {
-	border: 1px solid green;
-	color:  green;
+.d-tr {
+	border: 1px solid #000;
 }
 
-p {
-	border: 1px solid green;
-	color:  green;
+.date-tr {
+	background: red;
 }
 
-.pass {
-	border: 1px solid green;
-	color:  green;
-}
 
-#para {
-	border: 1px solid green;
-	color:  green;
-}
 
 /*
 div {
@@ -114,6 +108,5 @@ marquee {
 /*
 	Select all the div element and apply the declaration it them
 */
-
 
 

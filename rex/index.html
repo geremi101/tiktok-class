@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Geremi</title>
-		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+		<link href="styles/styles.css" rel="stylesheet" type="text/css" />
 	</head>
-	<body>
-		<header>
-			this is header
-		</header>
-		<section>
-			<div>
-				<h3 class="first">Section Headen</h3>
-				<p id="" class="sectionText">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	<body class="">
+		<div class="container-fluid">
+			<h1 class="display-1">Welcome to GEremi official site</h1>
+			<div class="">
+				
+				<p class="text-muted">
+					I am an experienced Full Stack Software Developer with a proven track record in the higher education industry.
 				</p>
+				
+				<div class="card">
+					
+					 <div class="card-body bg-light">
+					 	<h4 class="card-title">John Doe</h4>
+					 	I am an experienced Full Stack Software Developer with a proven track record in the higher education industry.
+
+		 		<a href="geremi.com" data-bs-toggle="tooltip"  title="this one ">link me</a> 	
+
+					 </div>
+				</div>
+
 			</div>
-			<div>
-				<h2>Section 2</h2>
-				<p class="section2P">
-					laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-		</section>
-			
+		</div>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</body>
 </html>
