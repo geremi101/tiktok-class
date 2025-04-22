@@ -7,7 +7,6 @@ hr {
 	border: 2px solid #369;
 }
 
-
 #logo {
 	box-shadow: 2px 5px 4px #369;
 	width: 200px;
@@ -27,6 +26,20 @@ hr {
 	background: red;
 }
 
+.app-dive {
+	/*
+	background-color: red;
+	background-image: url('img/d1.jpg');
+	background-repeat: no-repeat;
+	background-position: top right;
+	*/
+
+	background:  url(img/d1.jpg) #369 no-repeat;
+
+	color: white;
+	height: 600px;
+	width: 600px;
+}
 
 
 /*
@@ -47,7 +60,6 @@ marquee {
 /* this is a comment 
 	Author: Eze Geremi Matthew
 	Description: Geremi the man that is MAD!
-
 */
 
 
