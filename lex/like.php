@@ -17,6 +17,7 @@
 		exit();
 	}
 
+
 	// check if id is a number
  	if (!is_numeric($_GET['id'])) {
  		header("LOCATION: home.php?q=Fill the login Form");
@@ -65,3 +66,5 @@
 		header("LOCATION: home.php?q=Unable to like post");
 		exit();
 	}
+
+

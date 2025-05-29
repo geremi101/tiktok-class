@@ -18,19 +18,14 @@
 	// connect to the DB
 
 	require 'connect.php';
+	require 'app.php';
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$phone = $_POST['phone'];
-	$username = $_POST['username'];
-	$dob = $_POST['dob'];
-	$password = $_POST['password'];
-	$gender = $_POST['gender'];
+	$auth = new Authentication($con);
 
-	// run SQL Query
-	$insert = mysqli_query($con, "INSERT INTO users (id, name, d_o_b, gender, email, phone, username, password) VALUES(13, '$name', '$dob', '$gender', '$email', '$phone', '$username', '$password') ");
+	$result = $auth->register($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['username'], $_POST['dob'], $_POST['password'], $_POST['gender']);
 
-	if($insert){
+
+	if($result){
 		header("LOCATION: index.php?q=Account Created Succesfully!!!!");
 		exit();
 	}else{

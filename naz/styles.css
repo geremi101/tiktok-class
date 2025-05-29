@@ -1,0 +1,169 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.top-nav-wrapper{
+	background: #e62905;
+	color: #fff;
+	height: 30px;
+	padding-top: 7px;
+	padding-left: 7px ;
+	font-weight: bolder;
+}
+
+.top-left-nav{
+	float: left;
+	width: 400px;
+	margin-right: 130px;
+}
+.top-right-nav{
+	float: left;
+	width: 200px;
+}
+
+.clear {
+	clear: both;
+}
+
+.logo-wrapper{
+	width: 230px;
+	height: 70px;
+	float: left;
+}
+.logo {
+	width: inherit;
+	height: inherit;
+}
+
+.nav-wrapper {
+	height: 70px;
+	float: left;
+	width: 500px;
+	padding: 0px;
+}
+
+.main-nav {
+	background: #c92501;
+	color: #fff;
+}
+
+.nav-wrapper ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 25px 10px;
+	cursor: pointer;
+}
+
+.nav-wrapper ul li:hover {
+	background: #e62905;
+}
+
+.active-nav {
+	background: #e62905;
+}
+.hero-section-wrapper{
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+.side-nav-wrapper {
+	width: 200px;
+	float: left;
+}
+
+.nav-category-header{
+	background: #3d3d3d;
+	color: #fff;
+	padding: 8px;	
+	border: 2px solid #3d3d3d;
+}
+
+.nav-all-categories{
+	padding: 10px;
+	background: #f7f7f5;
+	border: 2px solid #e7e7e7;
+}
+
+.nav-category {
+	border-left: 2px solid #e7e7e7;
+	border-right: 2px solid #e7e7e7;
+}
+.nav-category ul li {
+	list-style-type: none;
+	padding: 7px 15px;
+	cursor: pointer;
+}
+
+.nav-category ul li:hover {
+	background: #f7f7f5;
+}
+
+.main-hero-wrapper {
+	
+	width: 480px;
+	float: left;
+	padding: 10px;
+}
+
+.category-select {
+	padding: 5px;
+	width: 120px;
+}
+
+.search-inp {
+	padding: 5px;
+}
+.search-btn {
+	padding: 6px;
+	background: #fdb125;
+	border: 0px;
+}
+
+.hero-background {
+	padding: 7px;
+	background: #f7f7f5;
+	margin-top: 7px;
+	border: 2px solid #e7e7e7;
+}
+
+.hero-image {
+	height: 182px;
+	background: url(img/hero.jpg) no-repeat center;
+	background-size: 100% 100%;
+	color: #fff;
+	padding: 30px;
+}
+
+.hero-headen {
+	height: 130px;
+}
+
+.shop-now-btn{
+	padding: 5px;
+	color: #fff;
+	background: #3d3d3d;
+	border: 0px;
+	font-size: 1em;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.ads-section{
+	padding: 10px 10px 10px 50px;
+}
+
+.ads-right, .ads-left {
+	width: 48%;
+	height: 80px;
+	float: left;
+}
+
+.ads-right {
+	background: url(img/short1.jpg);
+	background-size: 100% ;
+}
+.ads-left {
+	background: url(img/short2.jpg);
+	background-size: 100% ;
+}

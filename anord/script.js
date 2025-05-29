@@ -136,19 +136,20 @@ initialization
 
 
 /*
-let c = 0;
-while(c < 9){
-	c++;
-	console.log(c);
+	let c = 0;
+	while(c < 9){
+		c++;
+		console.log(c);
 
-	if(c == 5)
-		continue;
+		if(c == 5)
+			continue;
 
-	console.log("This will stop displaying after continue");
-	//statement	
-}
+		console.log("This will stop displaying after continue");
+		//statement	
+	}
 
 */
+
 /*
 	Js String and String Manipulations
 */
