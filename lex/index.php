@@ -123,12 +123,14 @@
 	<form method="post" action="submit.php">
 		<div class="mb-3">
   <label for="email" class="form-label">Email address</label>
-  <input type="text" class="form-control" name="email" id="email" placeholder="name@example.com">
+  <input type="text" class="form-control" name="email" id="email" placeholder="name@example.com" onfocusout="checkUsername()">
+
+  <small id="usernameErr"></small>
 </div>
 
 <div class="mb-3">
   <label for="password" class="form-label">Password</label>
-  <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+  <input type="text" id="password" class="form-control" name="password" id="password" placeholder="Enter Password">
 </div>
 
 					  <button type="submit" class="btn btn-success">Login</button>
@@ -142,6 +144,36 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+
+		<script>
+			function checkUsername() {
+				let username = document.getElementById('email');
+				let usernameErr = document.getElementById('usernameErr');
+				let cred = username.value;
+
+				if(cred.length < 6){
+					username.style.border = "1px solid red";
+					usernameErr.innerHTML = "Login must be greater than 6 characters";
+					return;
+				}
+
+				if(cred.length > 36){
+					username.style.border = "1px solid red";
+					usernameErr.innerHTML = "Login must be less than 36 characters";
+					return;
+				}
+
+				usernameErr.innerHTML = "valid";
+				username.style.border = "1px solid green";
+				
+			}
+
+			function checkPass(){
+				must be greater than 8 char
+				less than 64
+
+			}
+		</script>
 
 	</body>
 </html>

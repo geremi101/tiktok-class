@@ -167,3 +167,14 @@
 	background: url(img/short2.jpg);
 	background-size: 100% ;
 }
+
+.flex-contain {
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-contain div{
+	border: 1px solid red;
+
+}

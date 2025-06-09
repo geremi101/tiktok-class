@@ -7,7 +7,7 @@
 		exit();
 	}
 
-	if (strlen($password) < 6 && strlen($password) > 32 ) {
+	if (strlen($_POST['password']) < 6 && strlen($_POST['password']) > 32 ) {
 		header("LOCATION: index.php?q=invalid Password");
 	    exit();
 	}
