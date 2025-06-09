@@ -1,0 +1,70 @@
+*{margin: 0; padding: 0;}
+
+.header-contain {
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	width: 503px;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+.logo-wrapper {
+	height: 25px;
+	width: 100px;
+}
+.logo {
+	width: 100%;
+	height: 25px;
+}
+
+.main-nav {
+	height: 25px;
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+}
+
+.main-nav ul {
+	list-style-type: none;
+	margin-right: 10px;
+}
+.main-nav ul li {
+	display: inline;
+	padding: 2px 4px;
+}
+
+.main-nav ul li:hover {
+	background: orange;
+	color: #fff;
+	cursor: pointer;
+} 
+
+#span {
+	margin-right: 10px;
+}
+
+#donate {
+	background: orange;
+	color: #fff;
+	padding: 2px;
+}
+
+.hero-section-wrapper {
+	height: 200px;
+	background: url(img/icon/cads.jpg) no-repeat center ;
+	background-size: cover;
+}
+
+.hero-wrapper{
+	padding: 10px 0px;
+	width: 503px;
+	margin: 0px auto;
+	color: #fff;
+}
+
+.charColor {
+	color: orange;
+}
